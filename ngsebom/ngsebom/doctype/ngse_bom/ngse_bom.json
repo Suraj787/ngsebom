@@ -1,0 +1,362 @@
+{
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2020-01-03 14:38:58.580750",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "project",
+  "project_name",
+  "assigned_to",
+  "column_break_4",
+  "status",
+  "priority",
+  "required_date",
+  "section_break_8",
+  "itemid",
+  "item_group",
+  "component",
+  "qty",
+  "uom",
+  "design_drawing_no",
+  "column_break_12",
+  "item_name",
+  "raw_material",
+  "each_blank_size",
+  "kittable",
+  "qc_status",
+  "stock_uom",
+  "weight_per_unit",
+  "drawing_no",
+  "vendor",
+  "section_break_16",
+  "created_by",
+  "released_date_by",
+  "ordered_date_by",
+  "kitted_date_by",
+  "last_edited_by",
+  "column_break_20",
+  "added_date",
+  "released_date",
+  "ordered_date",
+  "kitted_date",
+  "last_edit_date",
+  "section_break_32",
+  "get_current_stock",
+  "column_break_47",
+  "heading_44",
+  "stock_and_rate"
+ ],
+ "fields": [
+  {
+   "default": "BOM-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "BOM-.#####"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nReleased\nRequisition\nRevised\nAvailable\nOrdered\nProcessing\nKitted\nIssued\nCancelled"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "itemid.item_group",
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Group",
+   "options": "Item Group",
+   "reqd": 1
+  },
+  {
+   "description": "If item no found in ERP Item List enter it here.",
+   "fieldname": "component",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Component"
+  },
+  {
+   "fieldname": "itemid",
+   "fieldtype": "Link",
+   "label": "ItemID-ERP",
+   "options": "Item"
+  },
+  {
+   "default": "1",
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "default": "Nos",
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "itemid.stock_uom",
+   "fieldname": "stock_uom",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Stock UOM"
+  },
+  {
+   "fieldname": "drawing_no",
+   "fieldtype": "Link",
+   "label": "Drawing No",
+   "options": "Drawing"
+  },
+  {
+   "fetch_from": "itemid.raw_material",
+   "fetch_if_empty": 1,
+   "fieldname": "raw_material",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Raw Material",
+   "options": "Raw Material"
+  },
+  {
+   "fetch_from": "itemid.each_blank",
+   "fetch_if_empty": 1,
+   "fieldname": "each_blank_size",
+   "fieldtype": "Data",
+   "label": "Each Blank Size",
+   "precision": "2"
+  },
+  {
+   "fieldname": "vendor",
+   "fieldtype": "Link",
+   "label": "Vendor",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "added_date",
+   "fieldtype": "Date",
+   "label": "Added Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "released_date_by",
+   "fieldtype": "Link",
+   "label": "Released By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ordered_date_by",
+   "fieldtype": "Link",
+   "label": "Ordered By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kitted_date_by",
+   "fieldtype": "Link",
+   "label": "Kitted By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "required_date",
+   "fieldtype": "Date",
+   "label": "Required Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "released_date",
+   "fieldtype": "Date",
+   "label": "Released Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ordered_date",
+   "fieldtype": "Date",
+   "label": "Ordered Date",
+   "read_only": 1
+  },
+  {
+   "default": "User",
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "default": "mukesh@nandan.co.in",
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned to",
+   "options": "User"
+  },
+  {
+   "default": "User",
+   "fieldname": "last_edited_by",
+   "fieldtype": "Link",
+   "label": "Last Edited by",
+   "options": "User",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "last_edit_date",
+   "fieldtype": "Date",
+   "label": "Last edit date",
+   "options": "timestamp",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kitted_date",
+   "fieldtype": "Date",
+   "label": "Kitted Date",
+   "read_only": 1
+  },
+  {
+   "default": "Normal",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Normal\nHigh Priority\nEscalation\nCritical"
+  },
+  {
+   "default": "Yes",
+   "fetch_from": "itemid.kittable",
+   "fetch_if_empty": 1,
+   "fieldname": "kittable",
+   "fieldtype": "Select",
+   "label": "Kittable",
+   "options": "Yes\nNo"
+  },
+  {
+   "default": "Not Required",
+   "fetch_from": "itemid.qc_status",
+   "fetch_if_empty": 1,
+   "fieldname": "qc_status",
+   "fieldtype": "Select",
+   "label": "QC Status",
+   "options": "Not Required\nRequested\nTC Required\nQC Tested Sample\nQC Under Process\nQC Lab Tested with document\nInternal QC Passed\nTC Recieved OK\nQC Failed"
+  },
+  {
+   "fetch_from": "itemid.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "stock_and_rate",
+   "fieldtype": "HTML",
+   "label": "Stock and Rate"
+  },
+  {
+   "fieldname": "get_current_stock",
+   "fieldtype": "Button",
+   "label": "Get Current Stock and Rate"
+  },
+  {
+   "fieldname": "column_break_47",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "itemid.item_name",
+   "fieldname": "heading_44",
+   "fieldtype": "Read Only",
+   "label": "Item"
+  },
+  {
+   "fieldname": "design_drawing_no",
+   "fieldtype": "Data",
+   "label": "Design Drawing No"
+  },
+  {
+   "fetch_from": "itemid.weight_per_unit",
+   "fetch_if_empty": 1,
+   "fieldname": "weight_per_unit",
+   "fieldtype": "Float",
+   "label": "Weight Per Unit",
+   "precision": "2"
+  }
+ ],
+ "hide_toolbar": 1,
+ "modified": "2020-05-30 18:19:36.994438",
+ "modified_by": "Administrator",
+ "module": "Ngsebom",
+ "name": "NGSE BOM",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "timeline_field": "project",
+ "track_changes": 1,
+ "track_views": 1
+}

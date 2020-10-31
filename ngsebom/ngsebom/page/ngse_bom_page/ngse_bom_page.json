@@ -1,0 +1,23 @@
+{
+ "content": null,
+ "creation": "2020-06-05 12:27:12.884596",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2020-06-05 12:27:12.884596",
+ "modified_by": "Administrator",
+ "module": "Ngsebom",
+ "name": "ngse-bom-page",
+ "owner": "Administrator",
+ "page_name": "NGSE BOM Page",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "BOM Page"
+}

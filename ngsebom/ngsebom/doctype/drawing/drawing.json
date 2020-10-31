@@ -1,0 +1,149 @@
+{
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "autoname": "Prompt",
+ "creation": "2020-05-21 17:35:26.454379",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "project_no",
+  "subassembly",
+  "component_name",
+  "column_break_6",
+  "status",
+  "raw_material",
+  "drawing_pdf",
+  "qty",
+  "section_break_10",
+  "description",
+  "section_break_11",
+  "uploaded_by",
+  "approved_by",
+  "column_break_15",
+  "last_updated"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_no",
+   "fieldtype": "Link",
+   "label": "Project No",
+   "options": "Project"
+  },
+  {
+   "fieldname": "subassembly",
+   "fieldtype": "Data",
+   "label": "Subassembly"
+  },
+  {
+   "fieldname": "component_name",
+   "fieldtype": "Data",
+   "label": "Component Name"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "New\nFor Approval\nApproved\nReleased"
+  },
+  {
+   "fieldname": "raw_material",
+   "fieldtype": "Data",
+   "label": "Raw Material"
+  },
+  {
+   "fieldname": "drawing_pdf",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "Drawing PDF"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Data",
+   "label": "Qty"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "uploaded_by",
+   "fieldtype": "Data",
+   "label": "Uploaded By"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "label": "Approved By"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_updated",
+   "fieldtype": "Data",
+   "label": "Last Updated"
+  }
+ ],
+ "modified": "2020-05-21 17:42:54.819532",
+ "modified_by": "Administrator",
+ "module": "Ngsebom",
+ "name": "Drawing",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Design Team",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "track_changes": 1,
+ "track_views": 1
+}
